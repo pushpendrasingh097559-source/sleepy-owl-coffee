@@ -63,10 +63,10 @@
 
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src= "./images/banner1.webp" alt="Banner 1"></div>
-      <div class="swiper-slide"><img src= "./images/banner2.webp" alt="Banner 2"></div>
-      <div class="swiper-slide"><img src= "./images/banner3.webp" alt="Banner 3"></div>
-      <div class="swiper-slide"><img src= "./images/banner4.webp" alt="Banner 4"></div>
+      <div class="swiper-slide"> <a href="https://sleepyowl.co/products/protein-coffee-classic"><img src= "./images/banner1.webp" alt="Banner 1"></a></div>
+      <div class="swiper-slide"><a href="https://sleepyowl.co/products/premix-coffee-free-mug"><img src= "./images/banner2.webp" alt="Banner 2"></a></div>
+      <div class="swiper-slide"><a href="https://sleepyowl.co/products/pack-of-50-sachets-combo"><img src= "./images/banner3.webp" alt="Banner 3"></a></div>
+      <div class="swiper-slide"><a href="https://sleepyowl.co/products/matcha-premix-vanilla"><img src= "./images/banner4.webp" alt="Banner 4"></a></div>
       </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -315,22 +315,30 @@ data-wow-delay="0.1s" >
 </script>
 
 <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    speed: 1200,   
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
         el: ".swiper-pagination",
         type: "progressbar",
-      },
-      navigation: {
+    },
+
+    navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-        
-      },
-        loop: true,
-        autoplay: {
-          delay: 2000,
-          disableOnInteraction: false,
-        },
-    });
-  </script>
+    },
+
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true
+    }
+});
+</script>
 </body>
 </html>
